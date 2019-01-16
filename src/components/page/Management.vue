@@ -13,8 +13,8 @@
                         <span>图片管理</span>
                         <el-button class="btn-card" type="primary">添加图片</el-button>
                     </div>
-                    <el-row>
-                        <el-col :span="8" v-for="(img, index) in images" :key="img.id" :offset="index > 0 ? 2 : 0">
+                    <el-row style="height: 265px">
+                        <el-col :span="8" v-for="(img, index) in images" :key="img.id" :offset="index > 0 ? 1 : 0" class="picture">
                             <el-card :body-style="{ padding: '0px' }">
                                 <img :src="img.image_url" class="image-card">
                                 <div style="padding: 14px;">
@@ -548,6 +548,10 @@
 
     .red{
         color: #ff0000;
+    }
+
+    .picture {
+        width: 260px;
     }
 
 </style>
